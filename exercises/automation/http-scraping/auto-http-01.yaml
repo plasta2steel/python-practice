@@ -1,0 +1,12 @@
+id: auto-http-01
+title: requests GET请求
+difficulty: 2
+category: http-scraping
+description: 用requests发送GET请求获取网页内容。
+expected_output: |
+  Status: 200
+  Content-Type: text/html
+  Body length: 1256 chars
+starter_code: |
+  # 模拟requests GET请求
+  # 注: 实际运行需要网络

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python练习平台</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- 方向选择页面 -->
+    <div id="direction-page" class="page active">
+        <div class="hero">
+            <h1><i class="fab fa-python"></i> Python练习平台</h1>
+            <p class="subtitle">选择你的学习方向，开始练习之旅</p>
+        </div>
+        <div class="direction-cards" id="direction-cards"></div>
+    </div>
+
+    <!-- 练习页面 -->
+    <div id="practice-page" class="page">
+        <nav class="navbar">
+            <div class="nav-left">
+                <button class="btn-back" onclick="showDirectionPage()">
+                    <i class="fas fa-arrow-left"></i> 返回
+                </button>
+                <span class="direction-name" id="direction-name"></span>
+            </div>
+            <div class="nav-right">
+                <button class="btn-theme" onclick="toggleTheme()">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+                <button class="btn-stats" onclick="showStats()">
+                    <i class="fas fa-chart-bar"></i> 统计
+                </button>
+            </div>
+        </nav>
+
+        <div class="practice-layout">
+            <!-- 左侧题目列表 -->
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-header">
+                    <h3>练习题</h3>
+                    <div class="legend">
+                        <span class="legend-item"><span class="dot completed">●</span> 已完成</span>
+                        <span class="legend-item"><span class="dot attempted">◐</span> 尝试中</span>
+                        <span class="legend-item"><span class="dot not-started">○</span> 未开始</span>
+                    </div>
+                    <div class="filters">
+                        <select id="filter-category" onchange="filterExercises()">
+                            <option value="">全部分类</option>
+                        </select>
+                        <select id="filter-difficulty" onchange="filterExercises()">
+                            <option value="">全部难度</option>
+                            <option value="1">★☆☆☆☆</option>
+                            <option value="2">★★☆☆☆</option>
+                            <option value="3">★★★☆☆</option>
+                            <option value="4">★★★★☆</option>
+                            <option value="5">★★★★★</option>
+                        </select>
+                        <input type="text" id="search-input" placeholder="搜索题目..." oninput="filterExercises()">
+                    </div>
+                </div>
+                <div class="exercise-list" id="exercise-list"></div>
+            </div>
+
+            <!-- 中间编辑器 -->
+            <div class="editor-area">
+                <div class="editor-header" id="editor-header">
+                    <div class="editor-title-area">
+                        <span class="exercise-title" id="exercise-title">选择一道题目开始练习</span>
+                        <div class="completion-indicator" id="completion-indicator" style="display:none">
+                            <i class="fas fa-check-circle"></i> 已完成
+                        </div>
+                    </div>
+                    <div class="editor-actions">
+                        <button class="btn-run" onclick="runCode()" id="btn-run" disabled>
+                            <i class="fas fa-play"></i> 运行
+                        </button>
+                        <button class="btn-reset" onclick="resetExercise()" id="btn-reset" disabled>
+                            <i class="fas fa-undo"></i> 重置
+                        </button>
+                        <button class="btn-help" onclick="toggleAIHelp()" id="btn-help" disabled>
+                            <i class="fas fa-robot"></i> AI帮助
+                        </button>
+                        <button class="btn-answer" onclick="toggleAnswer()" id="btn-answer" disabled>
+                            <i class="fas fa-lightbulb"></i> 解答
+                        </button>
+                    </div>
+                </div>
+                <div class="editor-container" id="editor-container">
+                    <div id="monaco-editor" style="width:100%;height:100%;"></div>
+                </div>
+                <div class="exercise-desc" id="exercise-desc">
+                    <p>请从左侧选择一道题目</p>
+                </div>
+            </div>
+
+            <!-- 右侧输出 -->
+            <div class="output-area">
+                <div class="output-header">
+                    <h3>输出</h3>
+                    <span class="execution-time" id="execution-time"></span>
+                </div>
+                <div class="output-content" id="output-content">
+                    <p class="placeholder">运行代码后，结果将显示在这里</p>
+                </div>
+                <div class="expected-output" id="expected-output" style="display:none">
+                    <h4>预期输出</h4>
+                    <pre id="expected-content"></pre>
+                </div>
+                <div class="match-status" id="match-status" style="display:none"></div>
+                
+                <!-- AI帮助内嵌面板 -->
+                <div class="ai-help-panel" id="ai-help-panel" style="display:none">
+                    <div class="ai-help-header">
+                        <h4><i class="fas fa-robot"></i> AI代码审查</h4>
+                    </div>
+                    <div class="ai-help-content">
+                        <p class="ai-help-desc">复制以下prompt到AI工具中获取代码审查：</p>
+                        <div class="ai-prompt-box">
+                            <pre id="ai-prompt-text"></pre>
+                        </div>
+                        <button class="btn-copy-ai" id="btn-copy-ai" onclick="copyAIPrompt()">
+                            <i class="fas fa-copy"></i> 复制Prompt
+                        </button>
+                        <div class="ai-tools-list">
+                            <span>推荐工具：</span>
+                            <a href="#" title="OpenCode">OpenCode</a>
+                            <a href="#" title="Claude Code">Claude Code</a>
+                            <a href="#" title="Cursor">Cursor</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 解答内嵌面板 -->
+                <div class="answer-panel" id="answer-panel" style="display:none">
+                    <div class="answer-header">
+                        <h4><i class="fas fa-lightbulb"></i> 参考解答</h4>
+                    </div>
+                    <div class="answer-content">
+                        <p class="answer-desc">先自己完成；卡住时再看参考解答。</p>
+                        <div class="answer-box">
+                            <pre id="answer-text"></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 统计弹窗 -->
+    <div id="stats-modal" class="modal" style="display:none">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>学习统计</h2>
+                <button class="btn-close" onclick="closeStats()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="stats-summary" id="stats-summary"></div>
+                <div class="stats-chart" id="stats-chart">
+                    <canvas id="progress-chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/loader.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

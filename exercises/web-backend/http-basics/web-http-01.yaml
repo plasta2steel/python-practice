@@ -1,0 +1,13 @@
+id: web-http-01
+title: HTTP请求方法
+difficulty: 2
+category: http-basics
+description: 理解GET、POST、PUT、DELETE的区别，输出每种方法的用途。
+expected_output: |
+  GET: Retrieve data
+  POST: Create resource
+  PUT: Update resource
+  DELETE: Delete resource
+starter_code: |
+  # 输出四种HTTP方法及其用途
+  methods = {'GET': '...', 'POST': '...', 'PUT': '...', 'DELETE': '...'}

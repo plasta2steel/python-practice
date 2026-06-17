@@ -1,0 +1,11 @@
+id: web-db-03
+title: 查询过滤
+difficulty: 3
+category: database
+description: 模拟带条件的数据库查询。
+expected_output: |
+  All users: 3
+  Age > 25: 2
+  Name contains 'li': 2
+  First user: Alice
+starter_code: # 模拟查询过滤

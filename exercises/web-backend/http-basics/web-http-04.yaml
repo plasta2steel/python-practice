@@ -1,0 +1,13 @@
+id: web-http-04
+title: JSON序列化
+difficulty: 2
+category: http-basics
+description: 将Python对象转为JSON，再从JSON解析回来。
+expected_output: |
+  Original: {'name': 'Alice', 'age': 25, 'scores': [85, 92]}
+  JSON string: {"name": "Alice", "age": 25, "scores": [85, 92]}
+  Parsed back: {'name': 'Alice', 'age': 25, 'scores': [85, 92]}
+starter_code: |
+  import json
+  
+  # 序列化和反序列化JSON

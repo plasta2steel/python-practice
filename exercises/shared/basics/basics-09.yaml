@@ -1,0 +1,13 @@
+id: basics-09
+title: 字典操作
+difficulty: 2
+category: basics
+description: 创建一个字典存储学生信息：name='Alice', age=20, scores=[85,92,78]。计算平均分并输出所有信息
+expected_output: |
+  Student: Alice
+  Age: 20
+  Average score: 85.0
+starter_code: |
+  student = {'name': 'Alice', 'age': 20, 'scores': [85, 92, 78]}
+  # 输出学生信息和平均分
+  

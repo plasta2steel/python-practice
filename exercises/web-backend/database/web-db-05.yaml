@@ -1,0 +1,10 @@
+id: web-db-05
+title: 分页查询
+difficulty: 4
+category: database
+description: 实现分页查询逻辑。
+expected_output: |
+  Page 1 (limit=2): [{'id': 1}, {'id': 2}]
+  Page 2 (limit=2): [{'id': 3}, {'id': 4}]
+  Total: 5 items, 3 pages
+starter_code: # 实现分页查询

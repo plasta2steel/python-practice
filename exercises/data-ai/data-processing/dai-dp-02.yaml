@@ -1,0 +1,15 @@
+id: dai-dp-02
+title: NumPy数组运算
+difficulty: 3
+category: data-processing
+description: 对NumPy数组进行基本数学运算、统计运算。
+expected_output: |
+  Sum: 15
+  Mean: 3.0
+  Std: 1.414...
+  Max: 5 at index 4
+starter_code: |
+  import numpy as np
+  
+  arr = np.array([1, 2, 3, 4, 5])
+  # 计算总和、均值、标准差、最大值及索引

@@ -1,0 +1,10 @@
+id: web-fa-06
+title: 状态码和异常处理
+difficulty: 4
+category: fastapi
+description: 自定义HTTP异常和状态码。
+expected_output: |
+  GET /items/1 -> 200 OK
+  GET /items/99 -> 404 Not Found
+  POST /items (invalid) -> 422 Unprocessable Entity
+starter_code: # 模拟HTTP异常处理

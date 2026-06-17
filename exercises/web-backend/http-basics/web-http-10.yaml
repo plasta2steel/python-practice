@@ -1,0 +1,18 @@
+id: web-http-10
+title: API错误响应格式
+difficulty: 3
+category: http-basics
+description: 设计统一的API错误响应格式。
+expected_output: |
+  Error response:
+  {
+    "error": {
+      "code": 404,
+      "message": "Resource not found",
+      "details": "Post with id 99 does not exist"
+    }
+  }
+starter_code: |
+  import json
+  
+  # 设计统一错误响应格式

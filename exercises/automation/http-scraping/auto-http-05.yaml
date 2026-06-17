@@ -1,0 +1,10 @@
+id: auto-http-05
+title: 网页标题批量抓取
+difficulty: 3
+category: http-scraping
+description: 模拟批量抓取多个网页的标题。
+expected_output: |
+  https://example.com -> Example Domain
+  https://python.org -> Welcome to Python.org
+  https://github.com -> GitHub
+starter_code: # 模拟批量抓取网页标题

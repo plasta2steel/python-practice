@@ -1,0 +1,15 @@
+id: dai-dp-03
+title: NumPy索引切片
+difficulty: 3
+category: data-processing
+description: 对二维数组进行索引和切片操作。
+expected_output: |
+  Row 1: [4 5 6]
+  Col 0: [1 4 7]
+  Sub: [[5 6]
+   [8 9]]
+starter_code: |
+  import numpy as np
+  
+  arr = np.array([[1,2,3],[4,5,6],[7,8,9]])
+  # 提取第2行、第1列、子矩阵

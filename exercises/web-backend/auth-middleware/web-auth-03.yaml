@@ -1,0 +1,10 @@
+id: web-auth-03
+title: JWT验证
+difficulty: 4
+category: auth-middleware
+description: 验证JWT token的有效性。
+expected_output: |
+  Valid token: {'user_id': 1}
+  Expired token: Token expired
+  Invalid token: Invalid signature
+starter_code: # 验证JWT token

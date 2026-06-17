@@ -1,0 +1,12 @@
+id: web-fa-04
+title: 请求体Pydantic模型
+difficulty: 3
+category: fastapi
+description: 用Pydantic模型定义请求体并验证。
+expected_output: |
+  Valid: UserCreate(name='Alice', email='alice@example.com', age=25)
+  Invalid: Validation error: age must be >= 0
+starter_code: |
+  from pydantic import BaseModel, EmailStr, validator
+  
+  # 定义Pydantic模型并验证

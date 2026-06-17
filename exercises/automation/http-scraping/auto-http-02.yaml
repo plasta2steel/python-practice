@@ -1,0 +1,10 @@
+id: auto-http-02
+title: requests POST请求
+difficulty: 3
+category: http-scraping
+description: 用requests发送POST请求提交数据。
+expected_output: |
+  POST data: {'name': 'Alice', 'email': 'alice@example.com'}
+  Response: 201 Created
+  Result: {'id': 1, 'name': 'Alice'}
+starter_code: # 模拟POST请求

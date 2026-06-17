@@ -1,0 +1,18 @@
+id: dai-dp-10
+title: Pandas数据透视表
+difficulty: 4
+category: data-processing
+description: 创建数据透视表，按多维度汇总数据。
+expected_output: |
+  Pivot table:
+  Score    mean
+  Year  Subject
+  2025  Math      85.0
+        English   90.0
+  2026  Math      88.0
+        English   92.0
+starter_code: |
+  import pandas as pd
+  
+  df = pd.DataFrame({'Year': [2025,2025,2026,2026], 'Subject': ['Math','English','Math','English'], 'Score': [85,90,88,92]})
+  # 创建透视表

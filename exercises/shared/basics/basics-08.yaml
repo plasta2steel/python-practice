@@ -1,0 +1,17 @@
+id: basics-08
+title: 列表操作
+difficulty: 2
+category: basics
+description: 给定列表 [3,1,4,1,5,9,2,6]，完成：排序、去重、添加元素7、删除元素1、反转。每步输出结果
+expected_output: |
+  Original: [3, 1, 4, 1, 5, 9, 2, 6]
+  Sorted: [1, 1, 2, 3, 4, 5, 6, 9]
+  Unique: [1, 2, 3, 4, 5, 6, 9]
+  Append 7: [1, 2, 3, 4, 5, 6, 9, 7]
+  Remove 1: [2, 3, 4, 5, 6, 9, 7]
+  Reversed: [7, 9, 6, 5, 4, 3, 2]
+starter_code: |
+  nums = [3, 1, 4, 1, 5, 9, 2, 6]
+  print(f'Original: {nums}')
+  # 对 nums 进行排序并输出
+  

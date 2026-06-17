@@ -1,0 +1,10 @@
+id: auto-proj-02
+title: Webhook通知
+difficulty: 3
+category: automation-projects
+description: 模拟发送钉钉/飞书webhook通知。
+expected_output: |
+  Webhook URL: https://oapi.dingtalk.com/robot/send
+  Message: {'text': 'Server alert: CPU usage > 90%'}
+  Response: {'errcode': 0, 'errmsg': 'ok'}
+starter_code: # 模拟webhook通知

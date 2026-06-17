@@ -1,0 +1,15 @@
+id: dai-ml-10
+title: 交叉验证
+difficulty: 5
+category: machine-learning
+description: 用交叉验证评估模型稳定性。
+expected_output: |
+  CV Scores: [0.96... 0.96... 0.96... 0.96... 1.0...]
+  Mean: 0.97...
+  Std: 0.02...
+starter_code: |
+  from sklearn.datasets import load_iris
+  from sklearn.tree import DecisionTreeClassifier
+  from sklearn.model_selection import cross_val_score
+  
+  # 5折交叉验证

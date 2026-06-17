@@ -1,0 +1,12 @@
+id: dai-ml-01
+title: sklearn数据集
+difficulty: 4
+category: machine-learning
+description: 加载sklearn内置数据集，了解数据结构。
+expected_output: |
+  Iris dataset: (150, 4) features, 3 classes
+  Feature names: ['sepal length (cm)', 'sepal width (cm)', 'petal length (cm)', 'petal width (cm)']
+starter_code: |
+  from sklearn.datasets import load_iris
+  
+  # 加载Iris数据集，输出形状和特征名

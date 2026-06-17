@@ -1,0 +1,15 @@
+id: web-auth-01
+title: 密码哈希
+difficulty: 4
+category: auth-middleware
+description: 用hashlib实现密码的哈希和验证。
+expected_output: |
+  Password: mypassword123
+  Hash: a1b2c3...
+  Verify correct: True
+  Verify wrong: False
+starter_code: |
+  import hashlib
+  import os
+  
+  # 实现密码哈希和验证

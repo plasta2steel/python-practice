@@ -1,0 +1,13 @@
+id: web-http-06
+title: REST API设计
+difficulty: 3
+category: http-basics
+description: 设计一个博客系统的REST API路由表。
+expected_output: |
+  GET    /api/posts          -> List all posts
+  POST   /api/posts          -> Create a post
+  GET    /api/posts/1        -> Get post 1
+  PUT    /api/posts/1        -> Update post 1
+  DELETE /api/posts/1        -> Delete post 1
+  GET    /api/posts/1/comments -> List comments
+starter_code: # 设计REST API路由，输出方法、路径、描述

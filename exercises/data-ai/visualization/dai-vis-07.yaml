@@ -1,0 +1,11 @@
+id: dai-vis-07
+title: 子图布局
+difficulty: 4
+category: visualization
+description: 在一个Figure中创建2x2的子图布局。
+expected_output: Subplots displayed
+starter_code: |
+  import matplotlib.pyplot as plt
+  import numpy as np
+  
+  # 创建2x2子图：折线图、柱状图、散点图、饼图

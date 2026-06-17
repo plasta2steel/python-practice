@@ -1,0 +1,9 @@
+id: web-auth-04
+title: 依赖注入模式
+difficulty: 4
+category: auth-middleware
+description: 模拟FastAPI的依赖注入模式获取当前用户。
+expected_output: |
+  Request 1: Current user = Alice (authenticated)
+  Request 2: 401 Unauthorized (no token)
+starter_code: # 模拟依赖注入获取当前用户

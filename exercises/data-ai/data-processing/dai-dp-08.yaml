@@ -1,0 +1,22 @@
+id: dai-dp-08
+title: Pandas缺失值处理
+difficulty: 4
+category: data-processing
+description: 处理DataFrame中的缺失值：检测、填充、删除。
+expected_output: |
+  Has NaN: True
+  Filled:
+     A    B
+  0  1.0  4.0
+  1  2.0  5.0
+  2  3.0  5.0
+  Dropped:
+     A    B
+  0  1.0  4.0
+  1  2.0  5.0
+starter_code: |
+  import pandas as pd
+  import numpy as np
+  
+  df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, np.nan, 5]})
+  # 检测NaN、用均值填充、删除含NaN的行

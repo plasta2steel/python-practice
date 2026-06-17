@@ -1,0 +1,14 @@
+id: dai-ml-04
+title: KNN分类
+difficulty: 4
+category: machine-learning
+description: 用K近邻算法对Iris数据集进行分类。
+expected_output: |
+  Accuracy: 1.0
+  Prediction: [0 1 2]
+starter_code: |
+  from sklearn.datasets import load_iris
+  from sklearn.model_selection import train_test_split
+  from sklearn.neighbors import KNeighborsClassifier
+  
+  # 训练KNN模型并评估

@@ -1,0 +1,15 @@
+id: auto-fs-03
+title: 文件读写模式
+difficulty: 2
+category: file-system
+description: 演示不同文件打开模式：r, w, a, rb, wb。
+expected_output: |
+  Write: 3 lines written
+  Append: 1 line added
+  Read: 4 lines total
+  Binary: 13 bytes
+starter_code: |
+  import tempfile
+  import os
+  
+  # 演示各种文件读写模式

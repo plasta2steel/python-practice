@@ -1,0 +1,16 @@
+id: basics-13
+title: 文件读写
+difficulty: 3
+category: basics
+description: 将内容写入文件再读出来：写入三行数据（name, age, city），然后读取并输出每行
+expected_output: |
+  Line 1: Alice
+  Line 2: 25
+  Line 3: Beijing
+starter_code: |
+  import tempfile
+  import os
+  
+  # 创建临时文件，写入三行，然后读取输出
+  # 提示: 用 with open(...) as f:
+  

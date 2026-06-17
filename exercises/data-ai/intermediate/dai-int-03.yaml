@@ -1,0 +1,16 @@
+id: dai-int-03
+title: JSON处理
+difficulty: 3
+category: intermediate
+description: 解析JSON字符串，提取特定字段，修改后转回JSON。
+expected_output: |
+  Name: Alice, Age: 25
+  Updated: {"name": "Alice", "age": 26, "city": "Beijing"}
+starter_code: |
+  import json
+  
+  json_str = '{"name": "Alice", "age": 25, "scores": [85, 92, 78]}'
+  # 1. 解析JSON
+  # 2. 提取name和age
+  # 3. 添加city字段
+  # 4. 转回JSON字符串

@@ -1,0 +1,10 @@
+id: auto-cli-06
+title: 交互式输入
+difficulty: 3
+category: cli-tools
+description: 实现交互式命令行输入。
+expected_output: |
+  What is your name? Alice
+  How old are you? 25
+  Hello Alice, you are 25 years old!
+starter_code: # 模拟交互式输入

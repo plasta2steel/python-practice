@@ -1,0 +1,22 @@
+id: basics-04
+title: 字符串拼接
+difficulty: 1
+category: basics
+description: 给定 first='Hello' 和 second='World'，用三种方式拼接并输出：加号、f-string、format方法
+expected_output: |
+  Hello World
+  Hello World
+  Hello World
+starter_code: |
+  first = 'Hello'
+  second = 'World'
+  # 方式1: 用 + 拼接
+  # 方式2: 用 f-string
+  # 方式3: 用 .format()
+  
+solution: |
+  first = 'Hello'
+  second = 'World'
+  print(first + ' ' + second)
+  print(f'{first} {second}')
+  print('{} {}'.format(first, second))

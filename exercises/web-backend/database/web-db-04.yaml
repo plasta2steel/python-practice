@@ -1,0 +1,10 @@
+id: web-db-04
+title: 关系和外键
+difficulty: 4
+category: database
+description: 定义User和Post的一对多关系。
+expected_output: |
+  User has many Posts
+  Post belongs to User
+  User 1 has 2 posts
+starter_code: # 定义User和Post的关系模型

@@ -1,0 +1,14 @@
+id: auto-http-06
+title: 错误处理和重试
+difficulty: 3
+category: http-scraping
+description: 实现带重试机制的HTTP请求。
+expected_output: |
+  Attempt 1: Timeout
+  Attempt 2: Timeout
+  Attempt 3: Success (200)
+  Result: OK
+starter_code: |
+  import time
+  
+  # 实现带重试的请求

@@ -1,0 +1,14 @@
+id: dai-int-04
+title: 日期时间处理
+difficulty: 3
+category: intermediate
+description: 计算两个日期之间的天数差，格式化输出日期。
+expected_output: |
+  2026-01-01 to 2026-06-16 = 167 days
+  Formatted: 2026年06月16日
+starter_code: |
+  from datetime import datetime, timedelta
+  
+  d1 = datetime(2026, 1, 1)
+  d2 = datetime(2026, 6, 16)
+  # 计算天数差并格式化

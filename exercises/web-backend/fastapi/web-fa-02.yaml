@@ -1,0 +1,11 @@
+id: web-fa-02
+title: 路径参数
+difficulty: 3
+category: fastapi
+description: 使用路径参数获取用户信息。
+expected_output: |
+  GET /users/1 -> User(id=1, name='Alice')
+  GET /users/2 -> User(id=2, name='Bob')
+starter_code: |
+  # 模拟带路径参数的路由
+  # GET /users/{user_id}

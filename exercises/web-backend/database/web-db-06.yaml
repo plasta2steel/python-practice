@@ -1,0 +1,10 @@
+id: web-db-06
+title: 排序
+difficulty: 3
+category: database
+description: 实现多字段排序。
+expected_output: |
+  By name: ['Alice', 'Bob', 'Charlie']
+  By age desc: [30, 25, 22]
+  By score desc, name: [('Bob', 92), ('Alice', 85), ('Charlie', 78)]
+starter_code: # 实现排序逻辑

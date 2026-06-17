@@ -1,0 +1,12 @@
+id: dai-int-01
+title: 正则表达式 - 提取邮箱
+difficulty: 3
+category: intermediate
+description: 从文本中提取所有邮箱地址。使用re模块的findall方法。
+expected_output: ['alice@example.com', 'bob@test.org']
+starter_code: |
+  import re
+  
+  text = 'Contact alice@example.com or bob@test.org for info.'
+  # 用 re.findall 提取邮箱
+  

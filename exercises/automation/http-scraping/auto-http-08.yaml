@@ -1,0 +1,11 @@
+id: auto-http-08
+title: 爬虫礼仪
+difficulty: 3
+category: http-scraping
+description: 实现遵守robots.txt的爬虫。
+expected_output: |
+  Checking robots.txt for https://example.com
+  Allowed: /public/
+  Disallowed: /admin/
+  Crawl delay: 1 second
+starter_code: # 模拟robots.txt检查

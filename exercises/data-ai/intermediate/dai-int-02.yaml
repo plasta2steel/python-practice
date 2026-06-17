@@ -1,0 +1,18 @@
+id: dai-int-02
+title: 正则表达式 - 验证手机号
+difficulty: 3
+category: intermediate
+description: 编写函数验证中国手机号格式（1开头，11位数字）。
+expected_output: |
+  13812345678: Valid
+  12345678901: Invalid
+  1381234567: Invalid
+starter_code: |
+  import re
+  
+  def validate_phone(phone):
+      # 用正则验证手机号
+      pass
+  
+  for p in ['13812345678', '12345678901', '1381234567']:
+      print(f'{p}: {validate_phone(p)}')

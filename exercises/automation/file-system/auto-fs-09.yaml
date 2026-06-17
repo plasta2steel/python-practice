@@ -1,0 +1,14 @@
+id: auto-fs-09
+title: 临时文件管理
+difficulty: 3
+category: file-system
+description: 使用tempfile创建和管理临时文件。
+expected_output: |
+  Temp file: /tmp/xxx
+  Content written
+  Cleaned up: True
+starter_code: |
+  import tempfile
+  import os
+  
+  # 创建临时文件，写入内容，然后清理

@@ -1,0 +1,13 @@
+id: web-http-02
+title: HTTP状态码
+difficulty: 2
+category: http-basics
+description: 创建常见HTTP状态码的字典，包含含义和分类。
+expected_output: |
+  200 OK - Success
+  201 Created - Success
+  400 Bad Request - Client Error
+  401 Unauthorized - Client Error
+  404 Not Found - Client Error
+  500 Internal Server Error - Server Error
+starter_code: # 创建状态码字典并输出

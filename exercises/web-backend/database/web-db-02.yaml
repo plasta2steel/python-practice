@@ -1,0 +1,11 @@
+id: web-db-02
+title: CRUD操作
+difficulty: 3
+category: database
+description: 模拟数据库的增删改查操作。
+expected_output: |
+  Create: User(id=1, name='Alice')
+  Read: User(id=1, name='Alice')
+  Update: User(id=1, name='Alice Updated')
+  Delete: User deleted
+starter_code: # 模拟CRUD操作

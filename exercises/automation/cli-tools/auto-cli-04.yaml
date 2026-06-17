@@ -1,0 +1,13 @@
+id: auto-cli-04
+title: 进度条
+difficulty: 3
+category: cli-tools
+description: 实现命令行进度条。
+expected_output: |
+  Processing: [████████████████████] 100%
+  Done! 10 items processed
+starter_code: |
+  import time
+  import sys
+  
+  # 实现简单进度条

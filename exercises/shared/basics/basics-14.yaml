@@ -1,0 +1,26 @@
+id: basics-14
+title: 类与继承
+difficulty: 3
+category: basics
+description: 创建 Animal 基类和 Dog、Cat 子类。Animal 有 name 属性和 speak() 方法。Dog 输出 'Woof!'，Cat 输出 'Meow!'
+expected_output: |
+  Buddy says: Woof!
+  Whiskers says: Meow!
+starter_code: |
+  class Animal:
+      # 定义基类
+      pass
+  
+  class Dog(Animal):
+      # 定义 Dog 子类
+      pass
+  
+  class Cat(Animal):
+      # 定义 Cat 子类
+      pass
+  
+  dog = Dog('Buddy')
+  cat = Cat('Whiskers')
+  print(f'{dog.name} says: {dog.speak()}')
+  print(f'{cat.name} says: {cat.speak()}')
+  

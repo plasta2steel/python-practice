@@ -1,0 +1,18 @@
+id: auto-proj-05
+title: 综合监控脚本
+difficulty: 4
+category: automation-projects
+description: 编写综合监控脚本：检查服务状态、记录日志、异常告警。
+expected_output: |
+  [2026-06-16 10:00:00] Checking services...
+    web-server: OK (response: 200, time: 0.05s)
+    database: OK (connections: 15)
+    cache: WARNING (memory: 90%)
+  
+  Alert sent: Cache memory usage high (90%)
+  Log saved to monitor.log
+starter_code: |
+  from datetime import datetime
+  import json
+  
+  # 编写综合监控脚本

@@ -1,0 +1,17 @@
+id: dai-int-08
+title: 生成器与迭代器
+difficulty: 3
+category: intermediate
+description: 编写生成器函数生成无限斐波那契数列，取前10项。
+expected_output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+starter_code: |
+  def fib_generator():
+      # 用 yield 实现斐波那契生成器
+      pass
+  
+  result = []
+  for i, n in enumerate(fib_generator()):
+      if i >= 10:
+          break
+      result.append(n)
+  print(result)

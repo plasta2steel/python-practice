@@ -1,0 +1,9 @@
+id: web-fa-03
+title: 查询参数
+difficulty: 3
+category: fastapi
+description: 使用查询参数进行分页和筛选。
+expected_output: |
+  GET /items?page=1&limit=10 -> Showing 10 items from page 1
+  GET /items?category=books -> Filtered by category: books
+starter_code: # 模拟查询参数处理

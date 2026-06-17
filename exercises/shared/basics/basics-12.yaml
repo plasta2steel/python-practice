@@ -1,0 +1,18 @@
+id: basics-12
+title: 异常处理
+difficulty: 3
+category: basics
+description: 编写 safe_divide(a, b) 函数，处理除零错误和类型错误。正常除法输出结果，异常输出错误信息
+expected_output: |
+  10 / 3 = 3.333...
+  10 / 0 = Error: division by zero
+  10 / 'a' = Error: unsupported operand type(s)
+starter_code: |
+  def safe_divide(a, b):
+      # 用 try/except 处理异常
+      pass
+  
+  print(f'10 / 3 = {safe_divide(10, 3):.3f}...')
+  print(f'10 / 0 = {safe_divide(10, 0)}')
+  print(f"10 / 'a' = {safe_divide(10, 'a')}")
+  

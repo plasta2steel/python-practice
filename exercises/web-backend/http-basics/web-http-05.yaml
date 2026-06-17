@@ -1,0 +1,12 @@
+id: web-http-05
+title: 请求头处理
+difficulty: 2
+category: http-basics
+description: 模拟创建HTTP请求头，提取Content-Type和Authorization。
+expected_output: |
+  Content-Type: application/json
+  Authorization: Bearer abc123
+  Accept: text/html
+starter_code: |
+  headers = {'Content-Type': 'application/json', 'Authorization': 'Bearer abc123', 'Accept': 'text/html'}
+  # 提取并输出特定请求头

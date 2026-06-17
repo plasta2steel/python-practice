@@ -1,0 +1,13 @@
+id: dai-ml-03
+title: 数据标准化
+difficulty: 4
+category: machine-learning
+description: 对特征进行标准化处理（均值0，方差1）。
+expected_output: |
+  Original mean: [5.84... 3.05... 3.75... 1.19...]
+  Scaled mean: [-1.46...e-15 -1.65...e-15 -1.46...e-15 -1.55...e-15]
+starter_code: |
+  from sklearn.datasets import load_iris
+  from sklearn.preprocessing import StandardScaler
+  
+  # 标准化Iris数据集

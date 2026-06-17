@@ -1,0 +1,17 @@
+id: dai-ml-06
+title: 线性回归
+difficulty: 4
+category: machine-learning
+description: 用线性回归预测房价。
+expected_output: |
+  Coefficients: [0.5...]
+  Intercept: 2.0...
+  R2 Score: 0.9...
+starter_code: |
+  from sklearn.linear_model import LinearRegression
+  import numpy as np
+  
+  np.random.seed(42)
+  X = np.random.rand(100, 1) * 10
+  y = 2 * X.squeeze() + 3 + np.random.randn(100) * 0.5
+  # 训练线性回归模型

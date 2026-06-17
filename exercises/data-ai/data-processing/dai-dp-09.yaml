@@ -1,0 +1,22 @@
+id: dai-dp-09
+title: Pandas合并连接
+difficulty: 4
+category: data-processing
+description: 合并两个DataFrame：内连接、左连接。
+expected_output: |
+  Inner join:
+     ID Name  Score
+  0   1  Alice   85
+  1   2  Bob     92
+  
+  Left join:
+     ID    Name  Score
+  0   1   Alice   85
+  1   2     Bob   92
+  2   3  Charlie    NaN
+starter_code: |
+  import pandas as pd
+  
+  df1 = pd.DataFrame({'ID': [1,2,3], 'Name': ['Alice','Bob','Charlie']})
+  df2 = pd.DataFrame({'ID': [1,2], 'Score': [85, 92]})
+  # 内连接和左连接

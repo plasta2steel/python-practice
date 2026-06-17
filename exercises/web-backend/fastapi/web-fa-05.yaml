@@ -1,0 +1,12 @@
+id: web-fa-05
+title: 响应模型
+difficulty: 3
+category: fastapi
+description: 定义响应模型，过滤返回字段。
+expected_output: |
+  Full model: {'id': 1, 'name': 'Alice', 'email': 'alice@example.com', 'password': 'secret'}
+  Response: {'id': 1, 'name': 'Alice', 'email': 'alice@example.com'}
+starter_code: |
+  from pydantic import BaseModel
+  
+  # 定义完整模型和响应模型（排除password）

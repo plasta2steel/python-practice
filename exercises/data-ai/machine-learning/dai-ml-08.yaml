@@ -1,0 +1,17 @@
+id: dai-ml-08
+title: KMeans聚类
+difficulty: 4
+category: machine-learning
+description: 用KMeans对数据进行聚类。
+expected_output: |
+  Cluster centers: [[...]
+   [...]
+   [...]]
+  Labels: [0 1 2 ...]
+starter_code: |
+  from sklearn.cluster import KMeans
+  import numpy as np
+  
+  np.random.seed(42)
+  X = np.vstack([np.random.randn(50,2)+[2,2], np.random.randn(50,2)+[-2,-2], np.random.randn(50,2)+[2,-2]])
+  # 用KMeans聚成3类

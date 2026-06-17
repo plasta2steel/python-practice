@@ -1,0 +1,28 @@
+id: basics-03
+title: 基本运算
+difficulty: 1
+category: basics
+description: 计算 a=15 和 b=4 的加、减、乘、除、整除、取余、幂运算，每行一个结果，格式如 '15 + 4 = 19'
+expected_output: |
+  15 + 4 = 19
+  15 - 4 = 11
+  15 * 4 = 60
+  15 / 4 = 3.75
+  15 // 4 = 3
+  15 % 4 = 3
+  15 ** 4 = 50625
+starter_code: |
+  a = 15
+  b = 4
+  # 用 print() 输出每行结果
+  
+solution: |
+  a = 15
+  b = 4
+  print(f'{a} + {b} = {a + b}')
+  print(f'{a} - {b} = {a - b}')
+  print(f'{a} * {b} = {a * b}')
+  print(f'{a} / {b} = {a / b}')
+  print(f'{a} // {b} = {a // b}')
+  print(f'{a} % {b} = {a % b}')
+  print(f'{a} ** {b} = {a ** b}')

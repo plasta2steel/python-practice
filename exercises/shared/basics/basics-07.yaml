@@ -1,0 +1,14 @@
+id: basics-07
+title: while循环 - 猜数字
+difficulty: 2
+category: basics
+description: 模拟猜数字：secret=7，guesses=[3,5,7]，依次猜测。猜小了输出'Too low'，猜大了输出'Too high'，猜对输出'Correct!'并结束
+expected_output: |
+  Guess: 3 -> Too low
+  Guess: 5 -> Too low
+  Guess: 7 -> Correct!
+starter_code: |
+  secret = 7
+  guesses = [3, 5, 7]
+  # 遍历 guesses 列表，模拟猜数字过程
+  

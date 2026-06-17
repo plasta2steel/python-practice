@@ -1,0 +1,14 @@
+id: dai-ml-02
+title: 训练测试集拆分
+difficulty: 4
+category: machine-learning
+description: 将数据集拆分为训练集和测试集。
+expected_output: |
+  Train size: 120
+  Test size: 30
+  Train ratio: 0.8
+starter_code: |
+  from sklearn.datasets import load_iris
+  from sklearn.model_selection import train_test_split
+  
+  # 拆分数据集，80%训练，20%测试

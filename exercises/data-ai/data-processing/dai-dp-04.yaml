@@ -1,0 +1,18 @@
+id: dai-dp-04
+title: Pandas Series
+difficulty: 3
+category: data-processing
+description: 创建和操作Pandas Series，包括索引、筛选、运算。
+expected_output: |
+  Series:
+  a    10
+  b    20
+  c    30
+  dtype: int64
+  Filtered: a    10
+  c    30
+  dtype: int64
+starter_code: |
+  import pandas as pd
+  
+  # 创建Series，设置自定义索引，筛选大于15的值

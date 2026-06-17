@@ -1,0 +1,13 @@
+id: auto-proj-03
+title: 系统信息收集
+difficulty: 3
+category: automation-projects
+description: 收集系统信息：CPU、内存、磁盘。
+expected_output: |
+  System Info:
+    CPU: 4 cores, 45% usage
+    Memory: 8GB total, 5.2GB used (65%)
+    Disk: 256GB total, 180GB used (70%)
+starter_code: |
+  # 收集系统信息
+  # 注: 模拟输出，实际使用psutil

@@ -1,0 +1,14 @@
+id: auto-fs-01
+title: pathlib路径操作
+difficulty: 2
+category: file-system
+description: 用pathlib进行路径拼接、判断、创建。
+expected_output: |
+  Joined: /home/user/docs/file.txt
+  Exists: True
+  Is file: True
+  Parent: /home/user/docs
+starter_code: |
+  from pathlib import Path
+  
+  # 演示pathlib操作

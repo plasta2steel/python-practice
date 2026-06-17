@@ -1,0 +1,14 @@
+id: auto-cli-07
+title: 环境变量读取
+difficulty: 3
+category: cli-tools
+description: 读取和使用环境变量配置。
+expected_output: |
+  DB_HOST: localhost
+  DB_PORT: 5432
+  DB_NAME: myapp
+  API_KEY: (not set, using default)
+starter_code: |
+  import os
+  
+  # 读取环境变量

@@ -1,0 +1,14 @@
+id: auto-http-03
+title: BeautifulSoup解析HTML
+difficulty: 3
+category: http-scraping
+description: 用BeautifulSoup解析HTML提取数据。
+expected_output: |
+  Title: Example Page
+  Links: ['https://link1.com', 'https://link2.com']
+  Paragraphs: 3
+starter_code: |
+  from bs4 import BeautifulSoup
+  
+  html = '<html><head><title>Example Page</title></head><body><p>Para 1</p><p>Para 2</p><a href="https://link1.com">Link 1</a><a href="https://link2.com">Link 2</a><p>Para 3</p></body></html>'
+  # 解析HTML

@@ -1,0 +1,20 @@
+id: dai-int-10
+title: 数据类 dataclass
+difficulty: 4
+category: intermediate
+description: 用dataclass定义Student类，包含name、age、scores属性，计算平均分方法。
+expected_output: |
+  Student(name='Alice', age=20, scores=[85, 92, 78])
+  Average: 85.0
+starter_code: |
+  from dataclasses import dataclass
+  from typing import List
+  
+  @dataclass
+  class Student:
+      # 定义 dataclass
+      pass
+  
+  s = Student('Alice', 20, [85, 92, 78])
+  print(s)
+  print(f'Average: {s.average()}')

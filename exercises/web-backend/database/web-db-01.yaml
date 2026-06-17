@@ -1,0 +1,12 @@
+id: web-db-01
+title: SQLModel定义表
+difficulty: 3
+category: database
+description: 用SQLModel定义User表结构。
+expected_output: |
+  User table: id, name, email, age
+  CREATE TABLE user (id INTEGER, name VARCHAR, email VARCHAR, age INTEGER)
+starter_code: |
+  from sqlmodel import SQLModel, Field
+  
+  # 定义User模型

@@ -1,0 +1,11 @@
+id: web-fa-07
+title: 路由分组
+difficulty: 4
+category: fastapi
+description: 用APIRouter组织路由。
+expected_output: |
+  Routes:
+  /api/v1/users
+  /api/v1/posts
+  /api/v2/users
+starter_code: # 模拟路由分组

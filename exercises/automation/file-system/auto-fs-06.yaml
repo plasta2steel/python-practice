@@ -1,0 +1,16 @@
+id: auto-fs-06
+title: YAML配置文件
+difficulty: 3
+category: file-system
+description: 读写YAML配置文件。
+expected_output: |
+  Server config:
+    host: localhost
+    port: 8080
+    database:
+      name: mydb
+      pool_size: 5
+starter_code: |
+  import yaml
+  
+  # 读写YAML配置

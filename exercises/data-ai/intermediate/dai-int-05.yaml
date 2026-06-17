@@ -1,0 +1,12 @@
+id: dai-int-05
+title: CSV文件处理
+difficulty: 3
+category: intermediate
+description: 创建CSV数据并写入文件，然后读取并计算平均值。
+expected_output: "Average score: 85.0"
+starter_code: |
+  import csv
+  import tempfile
+  import os
+  
+  # 创建临时CSV文件，写入学生姓名和分数，读取后计算平均分

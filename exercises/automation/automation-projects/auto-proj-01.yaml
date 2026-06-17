@@ -1,0 +1,14 @@
+id: auto-proj-01
+title: 定时任务调度
+difficulty: 3
+category: automation-projects
+description: 实现简单的定时任务调度器。
+expected_output: |
+  Task 'backup' scheduled every 3600 seconds
+  Task 'cleanup' scheduled every 86400 seconds
+  Running task 'backup' at 2026-06-16 10:00:00
+starter_code: |
+  import time
+  from datetime import datetime
+  
+  # 实现简单定时任务调度

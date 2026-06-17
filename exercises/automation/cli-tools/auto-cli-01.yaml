@@ -1,0 +1,12 @@
+id: auto-cli-01
+title: argparse基础
+difficulty: 2
+category: cli-tools
+description: 用argparse创建命令行工具。
+expected_output: |
+  Args: namespace(name='Alice', age=25, verbose=True)
+  Hello Alice, you are 25 years old
+starter_code: |
+  import argparse
+  
+  # 创建命令行参数解析器

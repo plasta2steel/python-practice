@@ -1,0 +1,9 @@
+id: web-http-07
+title: Cookie基础
+difficulty: 3
+category: http-basics
+description: 模拟Cookie的设置和读取。
+expected_output: |
+  Set-Cookie: session_id=abc123; Max-Age=3600
+  Read cookie: session_id = abc123
+starter_code: # 模拟Cookie操作

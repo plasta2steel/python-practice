@@ -1,0 +1,17 @@
+id: dai-ml-07
+title: 逻辑回归
+difficulty: 4
+category: machine-learning
+description: 用逻辑回归进行二分类。
+expected_output: |
+  Accuracy: 0.95...
+  Confusion Matrix:
+  [[...]
+   [...]]
+starter_code: |
+  from sklearn.datasets import load_breast_cancer
+  from sklearn.linear_model import LogisticRegression
+  from sklearn.model_selection import train_test_split
+  from sklearn.metrics import accuracy_score, confusion_matrix
+  
+  # 训练逻辑回归模型

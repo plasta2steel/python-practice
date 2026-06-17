@@ -1,0 +1,16 @@
+id: web-auth-02
+title: JWT生成
+difficulty: 4
+category: auth-middleware
+description: 模拟JWT token的生成和解析。
+expected_output: |
+  Header: {'alg': 'HS256', 'typ': 'JWT'}
+  Payload: {'user_id': 1, 'exp': 1234567890}
+  Token: eyJ...
+starter_code: |
+  import json
+  import base64
+  import hmac
+  import hashlib
+  
+  # 模拟JWT生成

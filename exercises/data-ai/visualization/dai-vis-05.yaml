@@ -1,0 +1,13 @@
+id: dai-vis-05
+title: 直方图
+difficulty: 3
+category: visualization
+description: 绘制正态分布的直方图。
+expected_output: Histogram displayed
+starter_code: |
+  import matplotlib.pyplot as plt
+  import numpy as np
+  
+  np.random.seed(42)
+  data = np.random.normal(100, 15, 1000)
+  # 绘制直方图，设置合适的bins

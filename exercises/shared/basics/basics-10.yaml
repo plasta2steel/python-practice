@@ -1,0 +1,13 @@
+id: basics-10
+title: 函数定义
+difficulty: 2
+category: basics
+description: 编写函数 fibonacci(n) 返回斐波那契数列的前n项。调用 fibonacci(10) 并输出结果
+expected_output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+starter_code: |
+  def fibonacci(n):
+      # 在这里实现斐波那契数列
+      pass
+  
+  print(fibonacci(10))
+  

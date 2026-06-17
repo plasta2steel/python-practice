@@ -1,0 +1,13 @@
+id: web-fa-01
+title: 第一个FastAPI应用
+difficulty: 3
+category: fastapi
+description: 创建一个最简单的FastAPI应用，包含根路由和健康检查。
+expected_output: |
+  Route: / -> {'message': 'Hello, FastAPI!'}
+  Route: /health -> {'status': 'ok'}
+starter_code: |
+  # 模拟FastAPI路由定义
+  # 注: 这里用字典模拟，实际运行需要uvicorn
+  routes = {}
+  # 定义 / 和 /health 路由

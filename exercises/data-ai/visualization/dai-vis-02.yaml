@@ -1,0 +1,12 @@
+id: dai-vis-02
+title: 柱状图
+difficulty: 3
+category: visualization
+description: 绘制柱状图比较不同编程语言的流行度。
+expected_output: Bar chart displayed
+starter_code: |
+  import matplotlib.pyplot as plt
+  
+  langs = ['Python', 'JavaScript', 'Java', 'C++', 'Go']
+  usage = [45, 35, 25, 20, 15]
+  # 绘制柱状图

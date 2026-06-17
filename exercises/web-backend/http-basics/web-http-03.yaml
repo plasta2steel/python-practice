@@ -1,0 +1,15 @@
+id: web-http-03
+title: URL解析
+difficulty: 2
+category: http-basics
+description: 用urllib解析URL的各个组成部分。
+expected_output: |
+  Scheme: https
+  Host: www.example.com
+  Path: /api/users
+  Query: page=1&limit=10
+starter_code: |
+  from urllib.parse import urlparse, parse_qs
+  
+  url = 'https://www.example.com/api/users?page=1&limit=10'
+  # 解析URL各部分

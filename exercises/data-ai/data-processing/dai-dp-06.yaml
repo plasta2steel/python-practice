@@ -1,0 +1,19 @@
+id: dai-dp-06
+title: Pandas数据筛选
+difficulty: 3
+category: data-processing
+description: 对DataFrame进行条件筛选、多条件组合筛选。
+expected_output: |
+  Age > 25:
+     Name  Age  Score
+  1    Bob   30     92
+  
+  Score >= 85 and Age < 30:
+      Name  Age  Score
+  0  Alice   25     85
+starter_code: |
+  import pandas as pd
+  
+  df = pd.DataFrame({'Name': ['Alice', 'Bob', 'Charlie'], 'Age': [25, 30, 22], 'Score': [85, 92, 78]})
+  # 筛选 Age > 25 的行
+  # 筛选 Score >= 85 且 Age < 30 的行

@@ -1,0 +1,23 @@
+id: basics-05
+title: 条件判断
+difficulty: 1
+category: basics
+description: "给定 score=85，判断等级：90+为A，80-89为B，70-79为C，60-69为D，60以下为F。输出 'Score: 85, Grade: B'"
+expected_output: "Score: 85, Grade: B"
+starter_code: |
+  score = 85
+  # 用 if/elif/else 判断等级
+  
+solution: |
+  score = 85
+  if score >= 90:
+      grade = 'A'
+  elif score >= 80:
+      grade = 'B'
+  elif score >= 70:
+      grade = 'C'
+  elif score >= 60:
+      grade = 'D'
+  else:
+      grade = 'F'
+  print(f'Score: {score}, Grade: {grade}')

@@ -1,0 +1,12 @@
+id: auto-cli-02
+title: click命令行框架
+difficulty: 3
+category: cli-tools
+description: 用click创建多命令CLI工具。
+expected_output: |
+  cli greet --name Alice
+  Hello, Alice!
+  
+  cli count --start 1 --end 5
+  Counting: 1 2 3 4 5
+starter_code: # 模拟click命令行工具

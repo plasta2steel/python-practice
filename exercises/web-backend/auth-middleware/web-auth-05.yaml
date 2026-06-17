@@ -1,0 +1,11 @@
+id: web-auth-05
+title: 权限控制
+difficulty: 5
+category: auth-middleware
+description: 实现基于角色的权限控制。
+expected_output: |
+  Admin can delete: True
+  User can delete: False
+  Admin can read: True
+  User can read: True
+starter_code: # 实现RBAC权限控制

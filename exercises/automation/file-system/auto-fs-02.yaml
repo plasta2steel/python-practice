@@ -1,0 +1,15 @@
+id: auto-fs-02
+title: 目录遍历
+difficulty: 2
+category: file-system
+description: 遍历目录，列出所有.py文件。
+expected_output: |
+  Found .py files:
+  - app.py
+  - utils.py
+  - tests/test_app.py
+starter_code: |
+  from pathlib import Path
+  import os
+  
+  # 遍历当前目录下所有.py文件

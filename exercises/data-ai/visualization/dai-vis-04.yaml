@@ -1,0 +1,12 @@
+id: dai-vis-04
+title: 饼图
+difficulty: 3
+category: visualization
+description: 绘制饼图显示市场份额分布。
+expected_output: Pie chart displayed
+starter_code: |
+  import matplotlib.pyplot as plt
+  
+  labels = ['Chrome', 'Safari', 'Edge', 'Firefox', 'Other']
+  sizes = [65, 18, 5, 4, 8]
+  # 绘制饼图，突出显示最大份额

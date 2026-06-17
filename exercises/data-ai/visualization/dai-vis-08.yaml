@@ -1,0 +1,11 @@
+id: dai-vis-08
+title: 图表美化
+difficulty: 4
+category: visualization
+description: 使用自定义样式、颜色、注解美化图表。
+expected_output: Styled plot displayed
+starter_code: |
+  import matplotlib.pyplot as plt
+  import numpy as np
+  
+  # 绘制一个带注解、自定义颜色、网格线的折线图

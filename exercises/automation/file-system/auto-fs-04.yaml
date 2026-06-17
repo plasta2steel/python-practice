@@ -1,0 +1,15 @@
+id: auto-fs-04
+title: shutil文件操作
+difficulty: 2
+category: file-system
+description: 用shutil复制、移动、删除文件和目录。
+expected_output: |
+  Copied: backup.txt
+  Moved: archive/backup.txt
+  Removed: archive/backup.txt
+starter_code: |
+  import shutil
+  import tempfile
+  import os
+  
+  # 演示shutil操作

@@ -1,0 +1,11 @@
+id: basics-01
+title: Hello World
+difficulty: 1
+category: basics
+description: 编写一个程序，输出 'Hello, World!'
+expected_output: Hello, World!
+starter_code: |
+  # 在这里写你的代码
+  
+solution: |
+  print('Hello, World!')

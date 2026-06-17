@@ -1,0 +1,12 @@
+id: dai-vis-01
+title: 折线图
+difficulty: 3
+category: visualization
+description: 用Matplotlib绘制简单的折线图，显示12个月的温度变化。
+expected_output: Plot displayed (check with matplotlib)
+starter_code: |
+  import matplotlib.pyplot as plt
+  
+  months = range(1, 13)
+  temps = [5, 8, 12, 18, 25, 30, 33, 32, 28, 20, 12, 6]
+  # 绘制折线图，添加标题和标签

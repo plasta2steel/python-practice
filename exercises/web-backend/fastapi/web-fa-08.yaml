@@ -1,0 +1,12 @@
+id: web-fa-08
+title: 中间件基础
+difficulty: 4
+category: fastapi
+description: 编写日志中间件记录请求时间。
+expected_output: |
+  [LOG] GET /users -> 200 (0.005s)
+  [LOG] POST /users -> 201 (0.012s)
+starter_code: |
+  import time
+  
+  # 模拟中间件日志记录

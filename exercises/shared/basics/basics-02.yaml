@@ -1,0 +1,15 @@
+id: basics-02
+title: 变量与赋值
+difficulty: 1
+category: basics
+description: 创建变量 name='Python' 和 year=2026，然后输出 'I am learning Python in 2026'
+expected_output: I am learning Python in 2026
+starter_code: |
+  name = 'Python'
+  year = 2026
+  # 输出: I am learning Python in 2026
+  
+solution: |
+  name = 'Python'
+  year = 2026
+  print(f'I am learning {name} in {year}')

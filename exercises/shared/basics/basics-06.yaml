@@ -1,0 +1,14 @@
+id: basics-06
+title: for循环 - 九九乘法表
+difficulty: 2
+category: basics
+description: 用嵌套for循环输出九九乘法表的前4行，格式如 '1 x 1 = 1'
+expected_output: |
+  1 x 1 = 1
+  1 x 2 = 2	2 x 2 = 4
+  1 x 3 = 3	2 x 3 = 6	3 x 3 = 9
+  1 x 4 = 4	2 x 4 = 8	3 x 4 = 12	4 x 4 = 16
+starter_code: |
+  # 用嵌套 for 循环输出九九乘法表前4行
+  # 提示: 用 end='\t' 控制制表符
+  

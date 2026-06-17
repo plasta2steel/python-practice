@@ -1,0 +1,10 @@
+id: dai-dp-05
+title: Pandas DataFrame创建
+difficulty: 3
+category: data-processing
+description: "从字典创建DataFrame，查看基本信息。"
+expected_output: "   Name  Age  Score\n0  Alice   25     85\n1    Bob   30     92\n2  Charlie  22     78\n\nShape: (3, 3)\nColumns: ['Name', 'Age', 'Score']"
+starter_code: |
+  import pandas as pd
+  
+  # 从字典创建DataFrame并输出

@@ -1,0 +1,13 @@
+id: auto-cli-03
+title: rich彩色输出
+difficulty: 3
+category: cli-tools
+description: 用rich库美化终端输出。
+expected_output: |
+  Colored output with rich:
+  [green]Success![/green]
+  [red]Error![/red]
+  [bold]Important[/bold]
+starter_code: |
+  # 模拟rich彩色输出
+  # 注: 实际使用需要安装rich

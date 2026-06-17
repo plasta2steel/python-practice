@@ -1,0 +1,20 @@
+id: auto-http-07
+title: 数据提取和存储
+difficulty: 3
+category: http-scraping
+description: 从HTML表格提取数据并存为CSV。
+expected_output: |
+  Extracted 3 rows
+  Saved to data.csv
+  Content:
+  Name,Age,City
+  Alice,25,Beijing
+  Bob,30,Shanghai
+  Charlie,22,Guangzhou
+starter_code: |
+  from bs4 import BeautifulSoup
+  import csv
+  import tempfile
+  
+  html = '<table><tr><th>Name</th><th>Age</th><th>City</th></tr><tr><td>Alice</td><td>25</td><td>Beijing</td></tr><tr><td>Bob</td><td>30</td><td>Shanghai</td></tr><tr><td>Charlie</td><td>22</td><td>Guangzhou</td></tr></table>'
+  # 提取表格数据并存为CSV

@@ -1,0 +1,14 @@
+id: dai-vis-03
+title: 散点图
+difficulty: 3
+category: visualization
+description: 绘制散点图显示身高和体重的关系。
+expected_output: Scatter plot displayed
+starter_code: |
+  import matplotlib.pyplot as plt
+  import numpy as np
+  
+  np.random.seed(42)
+  height = np.random.normal(170, 10, 50)
+  weight = height * 0.6 + np.random.normal(0, 5, 50)
+  # 绘制散点图

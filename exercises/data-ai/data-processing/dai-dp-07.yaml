@@ -1,0 +1,16 @@
+id: dai-dp-07
+title: Pandas分组聚合
+difficulty: 4
+category: data-processing
+description: 按类别分组，计算每组的统计值。
+expected_output: |
+  Category averages:
+  Category
+  A    85.0
+  B    90.0
+  dtype: float64
+starter_code: |
+  import pandas as pd
+  
+  df = pd.DataFrame({'Category': ['A','B','A','B','A'], 'Score': [80,90,85,88,90]})
+  # 按Category分组，计算平均分

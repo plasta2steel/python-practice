@@ -1,0 +1,15 @@
+id: dai-int-07
+title: lambda与高阶函数
+difficulty: 3
+category: intermediate
+description: 用lambda、map、filter、sorted处理列表数据。
+expected_output: |
+  Squares: [1, 4, 9, 16, 25]
+  Even: [2, 4]
+  Sorted by name: [('Alice', 85), ('Bob', 92), ('Charlie', 78)]
+starter_code: |
+  nums = [1, 2, 3, 4, 5]
+  students = [('Alice', 85), ('Charlie', 78), ('Bob', 92)]
+  # 用 map 求平方
+  # 用 filter 筛选偶数
+  # 用 sorted 按名字排序

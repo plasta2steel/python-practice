@@ -1,0 +1,16 @@
+id: auto-proj-04
+title: 批量文件重命名
+difficulty: 3
+category: automation-projects
+description: 批量重命名文件：添加日期前缀。
+expected_output: |
+  Renamed:
+    photo1.jpg -> 2026-06-16_photo1.jpg
+    photo2.jpg -> 2026-06-16_photo2.jpg
+    doc.pdf -> 2026-06-16_doc.pdf
+  Total: 3 files renamed
+starter_code: |
+  from pathlib import Path
+  from datetime import datetime
+  
+  # 模拟批量重命名

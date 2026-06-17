@@ -1,0 +1,15 @@
+id: dai-vis-06
+title: Seaborn热力图
+difficulty: 4
+category: visualization
+description: 用Seaborn绘制相关性热力图。
+expected_output: Heatmap displayed
+starter_code: |
+  import seaborn as sns
+  import matplotlib.pyplot as plt
+  import numpy as np
+  import pandas as pd
+  
+  np.random.seed(42)
+  df = pd.DataFrame(np.random.randn(100, 4), columns=['A','B','C','D'])
+  # 计算相关性矩阵并绘制热力图

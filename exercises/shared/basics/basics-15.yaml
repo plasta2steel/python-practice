@@ -1,0 +1,22 @@
+id: basics-15
+title: 装饰器
+difficulty: 4
+category: basics
+description: 编写一个计时装饰器 timer，记录函数执行时间。用它装饰一个计算1到1000000之和的函数
+expected_output: |
+  Sum: 500000500000
+  Time: 0.xxx seconds
+starter_code: |
+  import time
+  
+  def timer(func):
+      # 实现计时装饰器
+      pass
+  
+  @timer
+  def calculate_sum():
+      return sum(range(1, 1000001))
+  
+  result = calculate_sum()
+  print(f'Sum: {result}')
+  

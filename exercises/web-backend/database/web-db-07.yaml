@@ -1,0 +1,13 @@
+id: web-db-07
+title: 事务模拟
+difficulty: 4
+category: database
+description: 模拟数据库事务的提交和回滚。
+expected_output: |
+  Before: Balance A=1000, B=500
+  Transfer 200: Success
+  After: Balance A=800, B=700
+  
+  Transfer 2000: Insufficient funds
+  After: Balance A=800, B=700 (unchanged)
+starter_code: # 模拟事务操作

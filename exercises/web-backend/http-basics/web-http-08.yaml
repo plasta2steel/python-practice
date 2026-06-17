@@ -1,0 +1,10 @@
+id: web-http-08
+title: CORS概念
+difficulty: 3
+category: http-basics
+description: 解释CORS的工作原理，输出关键响应头。
+expected_output: |
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, POST, PUT, DELETE
+  Access-Control-Allow-Headers: Content-Type, Authorization
+starter_code: # 输出CORS相关响应头及其作用

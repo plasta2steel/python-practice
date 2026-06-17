@@ -1,0 +1,14 @@
+id: auto-fs-07
+title: 文件监控
+difficulty: 3
+category: file-system
+description: 监控文件变化（模拟）。
+expected_output: |
+  Watching: config.yaml
+  Change detected: modified at 2026-06-16 10:30:00
+  Action: Reload config
+starter_code: |
+  import time
+  from pathlib import Path
+  
+  # 模拟文件监控

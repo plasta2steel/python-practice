@@ -1,0 +1,20 @@
+id: dai-int-09
+title: 上下文管理器
+difficulty: 3
+category: intermediate
+description: 实现一个计时上下文管理器，记录代码块执行时间。
+expected_output: |
+  Block executed in 0.xxx seconds
+  Result: 500000500000
+starter_code: |
+  import time
+  from contextlib import contextmanager
+  
+  @contextmanager
+  def timer():
+      # 实现计时上下文管理器
+      pass
+  
+  with timer() as t:
+      result = sum(range(1, 1000001))
+  print(f'Result: {result}')

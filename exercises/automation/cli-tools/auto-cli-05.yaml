@@ -1,0 +1,13 @@
+id: auto-cli-05
+title: 表格输出
+difficulty: 3
+category: cli-tools
+description: 在终端中输出格式化表格。
+expected_output: |
+  +---------+-----+---------+
+  | Name    | Age | City    |
+  +---------+-----+---------+
+  | Alice   | 25  | Beijing |
+  | Bob     | 30  | Shanghai|
+  +---------+-----+---------+
+starter_code: # 实现表格输出

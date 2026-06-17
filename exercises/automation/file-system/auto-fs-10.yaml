@@ -1,0 +1,15 @@
+id: auto-fs-10
+title: 文件压缩
+difficulty: 3
+category: file-system
+description: 用zipfile压缩和解压文件。
+expected_output: |
+  Created: archive.zip (3 files)
+  Extracted: output/ (3 files)
+  Contents: ['file1.txt', 'file2.txt', 'file3.txt']
+starter_code: |
+  import zipfile
+  import tempfile
+  import os
+  
+  # 创建zip压缩包并解压

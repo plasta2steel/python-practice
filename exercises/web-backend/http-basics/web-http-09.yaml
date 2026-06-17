@@ -1,0 +1,16 @@
+id: web-http-09
+title: Session vs JWT
+difficulty: 3
+category: http-basics
+description: 对比Session和JWT两种认证方式的优缺点。
+expected_output: |
+  Session:
+    - Server-side storage
+    - Stateful
+    - Easy to revoke
+  
+  JWT:
+    - Client-side storage
+    - Stateless
+    - Scalable
+starter_code: # 输出Session和JWT的对比

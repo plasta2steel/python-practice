@@ -1,0 +1,13 @@
+id: auto-fs-05
+title: JSON配置文件
+difficulty: 2
+category: file-system
+description: 读写JSON配置文件，支持默认值。
+expected_output: |
+  Config: {'host': 'localhost', 'port': 8080, 'debug': True}
+  With defaults: {'host': 'localhost', 'port': 8080, 'debug': True, 'timeout': 30}
+starter_code: |
+  import json
+  import os
+  
+  # 读写JSON配置
