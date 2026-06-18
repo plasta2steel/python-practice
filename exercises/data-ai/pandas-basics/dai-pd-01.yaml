@@ -1,0 +1,28 @@
+id: dai-pd-01
+title: 初识Pandas - 创建Series
+difficulty: 1
+category: pandas-basics
+description: |
+  Pandas有两个核心数据结构：Series（一维）和DataFrame（二维）。
+  请导入pandas（别名pd），然后创建一个Series：
+  包含值 [10, 20, 30, 40]，索引为 ['a', 'b', 'c', 'd']
+  输出这个Series
+expected_output: |
+  a    10
+  b    20
+  c    30
+  d    40
+  dtype: int64
+starter_code: |
+  # 第1步: 导入pandas，约定别名为pd
+  import pandas as pd
+
+  # 第2步: 用 pd.Series() 创建一个Series
+  # 提示: s = pd.Series([10, 20, 30, 40], index=['a', 'b', 'c', 'd'])
+
+  # 第3步: 用 print() 输出 s
+
+solution: |
+  import pandas as pd
+  s = pd.Series([10, 20, 30, 40], index=['a', 'b', 'c', 'd'])
+  print(s)

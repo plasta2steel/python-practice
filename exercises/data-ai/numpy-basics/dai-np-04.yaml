@@ -1,0 +1,24 @@
+id: dai-np-04
+title: 数组切片 - 取出部分数据
+difficulty: 2
+category: numpy-basics
+description: |
+  切片是从数组中取出部分数据的方法。
+  数组 arr = [10, 20, 30, 40, 50, 60]
+  请分别输出：前3个元素，最后2个元素
+expected_output: |
+  前3个: [10 20 30]
+  最后2个: [50 60]
+starter_code: |
+  import numpy as np
+  arr = np.array([10, 20, 30, 40, 50, 60])
+
+  # 取前3个元素：arr[:3]
+
+  # 取最后2个元素：arr[-2:]
+
+solution: |
+  import numpy as np
+  arr = np.array([10, 20, 30, 40, 50, 60])
+  print(f"前3个: {arr[:3]}")
+  print(f"最后2个: {arr[-2:]}")

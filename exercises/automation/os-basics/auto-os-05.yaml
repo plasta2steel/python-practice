@@ -1,0 +1,51 @@
+id: auto-os-05
+title: 读写文件 - open()基础
+difficulty: 2
+category: os-basics
+description: |
+  文件读写是自动化的基础技能。
+  - open(file, 'w'): 写模式（会覆盖原内容）
+  - open(file, 'r'): 读模式
+  - open(file, 'a'): 追加模式
+
+  请完成以下操作：
+  1. 写入文件 'test.txt'，内容为 'Hello, Python!'
+  2. 读取并输出文件内容
+  3. 追加内容 ' New line.'
+  4. 再次读取并输出
+expected_output: |
+  写入文件: Hello, Python!
+  读取文件: Hello, Python!
+  追加后: Hello, Python! New line.
+starter_code: |
+  # 写入文件
+  with open('test.txt', 'w') as f:
+      f.write('Hello, Python!')
+  print("写入文件: Hello, Python!")
+
+  # 读取文件
+  with open('test.txt', 'r') as f:
+      content = f.read()
+  print(f"读取文件: {content}")
+
+  # 追加内容
+  with open('test.txt', 'a') as f:
+      f.write(' New line.')
+
+  # 再次读取
+  with open('test.txt', 'r') as f:
+      content = f.read()
+  print(f"追加后: {content}")
+
+solution: |
+  with open('test.txt', 'w') as f:
+      f.write('Hello, Python!')
+  print("写入文件: Hello, Python!")
+  with open('test.txt', 'r') as f:
+      content = f.read()
+  print(f"读取文件: {content}")
+  with open('test.txt', 'a') as f:
+      f.write(' New line.')
+  with open('test.txt', 'r') as f:
+      content = f.read()
+  print(f"追加后: {content}")

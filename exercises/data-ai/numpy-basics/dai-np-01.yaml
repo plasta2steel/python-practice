@@ -1,0 +1,23 @@
+id: dai-np-01
+title: 初识NumPy - 导入与创建数组
+difficulty: 1
+category: numpy-basics
+description: |
+  NumPy是Python数据科学的基础库。
+  请导入numpy（别名np），然后创建一个包含 [1, 2, 3, 4, 5] 的数组。
+  最后输出这个数组。
+expected_output: |
+  [1 2 3 4 5]
+starter_code: |
+  # 第1步: 导入numpy，约定别名为np
+  import numpy as np
+
+  # 第2步: 用 np.array() 创建一个数组
+  # 提示: arr = np.array([1, 2, 3, 4, 5])
+
+  # 第3步: 用 print() 输出 arr
+
+solution: |
+  import numpy as np
+  arr = np.array([1, 2, 3, 4, 5])
+  print(arr)

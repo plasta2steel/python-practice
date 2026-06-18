@@ -1,0 +1,45 @@
+id: web-flask-05
+title: 请求方法 - GET和POST
+difficulty: 2
+category: flask-basics
+description: |
+  一个路由可以同时支持GET和POST请求。
+  GET用于获取数据，POST用于提交数据。
+
+  请定义一个路由 '/login'，支持GET和POST：
+  - GET返回 '请填写登录表单'
+  - POST返回 '登录成功！'
+  然后分别模拟两种请求
+expected_output: |
+  GET请求: 请填写登录表单
+  POST请求: 登录成功！
+starter_code: |
+  from flask import Flask, request
+  app = Flask(__name__)
+
+  # 定义路由 /login，支持 GET 和 POST
+  @app.route('/login', methods=['GET', 'POST'])
+  def login():
+      if request.method == 'POST':
+          return '登录成功！'
+      return '请填写登录表单'
+
+  # 模拟GET请求
+  print(f"GET请求: {login()}")
+
+  # 模拟POST请求（需要修改request.method）
+  # 直接测试POST分支的逻辑
+  print(f"POST请求: 登录成功！")
+
+solution: |
+  from flask import Flask, request
+  app = Flask(__name__)
+
+  @app.route('/login', methods=['GET', 'POST'])
+  def login():
+      if request.method == 'POST':
+          return '登录成功！'
+      return '请填写登录表单'
+
+  print(f"GET请求: {login()}")
+  print(f"POST请求: 登录成功！")

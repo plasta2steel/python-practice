@@ -1,0 +1,38 @@
+id: web-flask-02
+title: 路由基础 - @app.route装饰器
+difficulty: 1
+category: flask-basics
+description: |
+  路由(URL到函数的映射)是Web应用的核心。
+  用 @app.route('/path') 装饰一个函数，它就会响应对应的URL。
+
+  请定义一个路由 '/'，对应函数返回 '欢迎来到首页！'
+  然后输出这个路由规则
+expected_output: |
+  路由规则: /
+  返回内容: 欢迎来到首页！
+starter_code: |
+  from flask import Flask
+  app = Flask(__name__)
+
+  # 用 @app.route('/') 装饰一个函数
+  # 函数名可以任意，比如 index 或 home
+  @app.route('/')
+  def index():
+      return '欢迎来到首页！'
+
+  # 输出这个路由规则
+  # 提示: app.url_map
+  for rule in app.url_map.iter_rules():
+      print(f"路由规则: {rule.rule}")
+
+solution: |
+  from flask import Flask
+  app = Flask(__name__)
+
+  @app.route('/')
+  def index():
+      return '欢迎来到首页！'
+
+  for rule in app.url_map.iter_rules():
+      print(f"路由规则: {rule.rule}")

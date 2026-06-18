@@ -1,0 +1,56 @@
+id: auto-os-06
+title: pathlib入门 - 现代路径操作
+difficulty: 2
+category: os-basics
+description: |
+  pathlib是Python 3.4+推荐的路径操作方式，比os.path更优雅。
+  - Path.cwd(): 当前目录
+  - Path.mkdir(): 创建目录
+  - Path.exists(): 判断存在
+  - Path.write_text(): 写入文本
+  - Path.read_text(): 读取文本
+
+  请用pathlib完成：
+  1. 获取当前目录
+  2. 创建一个Path对象指向 'pathlib_test.txt'
+  3. 写入内容 'pathlib is awesome!'
+  4. 读取并输出
+  5. 删除文件
+expected_output: |
+  当前目录: /home/user/project
+  写入: pathlib is awesome!
+  读取: pathlib is awesome!
+  文件已删除
+starter_code: |
+  from pathlib import Path
+
+  # 获取当前目录
+  current = Path.cwd()
+  print(f"当前目录: {current}")
+
+  # 创建Path对象
+  file_path = Path('pathlib_test.txt')
+
+  # 写入文件
+  file_path.write_text('pathlib is awesome!')
+  print(f"写入: pathlib is awesome!")
+
+  # 读取文件
+  content = file_path.read_text()
+  print(f"读取: {content}")
+
+  # 删除文件
+  file_path.unlink()
+  print("文件已删除")
+
+solution: |
+  from pathlib import Path
+  current = Path.cwd()
+  print(f"当前目录: {current}")
+  file_path = Path('pathlib_test.txt')
+  file_path.write_text('pathlib is awesome!')
+  print(f"写入: pathlib is awesome!")
+  content = file_path.read_text()
+  print(f"读取: {content}")
+  file_path.unlink()
+  print("文件已删除")

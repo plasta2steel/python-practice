@@ -1,0 +1,40 @@
+id: web-flask-03
+title: 动态路由 - URL参数
+difficulty: 2
+category: flask-basics
+description: |
+  动态路由可以从URL中提取参数。
+  例如 /user/zhangsan 中的 'zhangsan' 可以作为参数传递给函数。
+
+  请定义一个路由 '/user/<username>'，函数返回 f'用户: {username}'
+  然后模拟访问 /user/zhangsan 的输出
+expected_output: |
+  模拟访问 /user/zhangsan
+  用户: zhangsan
+starter_code: |
+  from flask import Flask
+  app = Flask(__name__)
+
+  # 定义动态路由 /user/<username>
+  # 函数接收 username 参数
+  @app.route('/user/<username>')
+  def show_user(username):
+      return f'用户: {username}'
+
+  # 模拟访问 /user/zhangsan
+  # 直接调用函数来测试
+  print("模拟访问 /user/zhangsan")
+  result = show_user('zhangsan')
+  print(result)
+
+solution: |
+  from flask import Flask
+  app = Flask(__name__)
+
+  @app.route('/user/<username>')
+  def show_user(username):
+      return f'用户: {username}'
+
+  print("模拟访问 /user/zhangsan")
+  result = show_user('zhangsan')
+  print(result)

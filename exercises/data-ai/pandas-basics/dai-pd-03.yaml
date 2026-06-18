@@ -1,0 +1,45 @@
+id: dai-pd-03
+title: DataFrame属性 - shape和dtypes
+difficulty: 1
+category: pandas-basics
+description: |
+  DataFrame有常用的属性可以快速了解数据。
+  给定DataFrame，分别输出：
+  1. 形状（shape）—— 返回 (行数, 列数)
+  2. 列名（columns）
+  3. 数据类型（dtypes）
+expected_output: |
+  形状: (4, 3)
+  列名: Index(['姓名', '年龄', '城市'], dtype='object')
+  数据类型:
+  姓名    object
+  年龄     int64
+  城市    object
+  dtype: object
+starter_code: |
+  import pandas as pd
+  df = pd.DataFrame({
+      '姓名': ['张三', '李四', '王五', '赵六'],
+      '年龄': [25, 30, 28, 35],
+      '城市': ['北京', '上海', '广州', '深圳']
+  })
+
+  # 输出 shape
+  print(f"形状: {df.shape}")
+
+  # 输出 columns
+  print(f"列名: {df.columns}")
+
+  # 输出 dtypes
+  print(f"数据类型:\n{df.dtypes}")
+
+solution: |
+  import pandas as pd
+  df = pd.DataFrame({
+      '姓名': ['张三', '李四', '王五', '赵六'],
+      '年龄': [25, 30, 28, 35],
+      '城市': ['北京', '上海', '广州', '深圳']
+  })
+  print(f"形状: {df.shape}")
+  print(f"列名: {df.columns}")
+  print(f"数据类型:\n{df.dtypes}")

@@ -1,0 +1,48 @@
+id: web-flask-04
+title: JSON响应 - jsonify
+difficulty: 2
+category: flask-basics
+description: |
+  API通常返回JSON格式的数据，而不是HTML。
+  用 flask.jsonify() 可以方便地创建JSON响应。
+
+  请定义一个路由 '/api/info'，返回一个JSON对象：
+  {"name": "Flask练习", "version": "1.0", "status": "running"}
+  然后输出这个JSON对象的内容
+expected_output: |
+  API响应类型: <class 'flask.wrappers.Response'>
+  响应内容: {"name":"Flask练习","status":"running","version":"1.0"}
+starter_code: |
+  from flask import Flask, jsonify
+  app = Flask(__name__)
+
+  # 定义路由 /api/info
+  # 用 jsonify() 返回JSON
+  @app.route('/api/info')
+  def api_info():
+      return jsonify({
+          'name': 'Flask练习',
+          'version': '1.0',
+          'status': 'running'
+      })
+
+  # 测试：调用函数并输出响应
+  response = api_info()
+  print(f"API响应类型: {type(response)}")
+  print(f"响应内容: {response.get_data(as_text=True)}")
+
+solution: |
+  from flask import Flask, jsonify
+  app = Flask(__name__)
+
+  @app.route('/api/info')
+  def api_info():
+      return jsonify({
+          'name': 'Flask练习',
+          'version': '1.0',
+          'status': 'running'
+      })
+
+  response = api_info()
+  print(f"API响应类型: {type(response)}")
+  print(f"响应内容: {response.get_data(as_text=True)}")

@@ -1,0 +1,40 @@
+id: dai-pd-02
+title: 创建DataFrame - 从字典创建
+difficulty: 1
+category: pandas-basics
+description: |
+  DataFrame是Pandas中最常用的数据结构，像一个Excel表格。
+  用字典创建一个DataFrame，字典包含：
+    '姓名': ['张三', '李四', '王五']
+    '年龄': [25, 30, 28]
+    '城市': ['北京', '上海', '广州']
+  输出这个DataFrame
+expected_output: |
+     姓名  年龄  城市
+  0  张三   25  北京
+  1  李四   30  上海
+  2  王五   28  广州
+starter_code: |
+  import pandas as pd
+
+  # 创建字典
+  data = {
+      '姓名': ['张三', '李四', '王五'],
+      '年龄': [25, 30, 28],
+      '城市': ['北京', '上海', '广州']
+  }
+
+  # 用 pd.DataFrame(data) 创建 DataFrame
+  df = pd.DataFrame(data)
+
+  # 输出 df
+
+solution: |
+  import pandas as pd
+  data = {
+      '姓名': ['张三', '李四', '王五'],
+      '年龄': [25, 30, 28],
+      '城市': ['北京', '上海', '广州']
+  }
+  df = pd.DataFrame(data)
+  print(df)

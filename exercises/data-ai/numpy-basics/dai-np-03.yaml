@@ -1,0 +1,27 @@
+id: dai-np-03
+title: 数组运算 - 元素级计算
+difficulty: 2
+category: numpy-basics
+description: |
+  NumPy数组可以直接进行数学运算，无需循环。
+  有两个数组：a = [1, 2, 3] 和 b = [10, 20, 30]
+  请分别输出：a + b 的结果，a * 2 的结果
+expected_output: |
+  a + b = [11 22 33]
+  a * 2 = [2 4 6]
+starter_code: |
+  import numpy as np
+  a = np.array([1, 2, 3])
+  b = np.array([10, 20, 30])
+
+  # 输出 a + b
+  print(f"a + b = {a + b}")
+
+  # 输出 a * 2
+
+solution: |
+  import numpy as np
+  a = np.array([1, 2, 3])
+  b = np.array([10, 20, 30])
+  print(f"a + b = {a + b}")
+  print(f"a * 2 = {a * 2}")

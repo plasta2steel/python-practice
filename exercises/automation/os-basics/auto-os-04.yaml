@@ -1,0 +1,48 @@
+id: auto-os-04
+title: 创建和删除目录
+difficulty: 2
+category: os-basics
+description: |
+  创建和删除目录是文件操作的基础。
+  - os.mkdir(path): 创建单级目录
+  - os.makedirs(path): 创建多级目录（递归创建）
+  - os.rmdir(path): 删除空目录
+
+  请完成以下操作并输出每一步的结果：
+  1. 创建目录 'test_folder'
+  2. 检查目录是否存在
+  3. 删除目录
+  4. 再次检查目录是否存在
+expected_output: |
+  创建目录: test_folder
+  目录存在: True
+  删除目录: test_folder
+  目录存在: False
+starter_code: |
+  import os
+
+  folder = 'test_folder'
+
+  # 创建目录
+  os.mkdir(folder)
+  print(f"创建目录: {folder}")
+
+  # 检查目录是否存在
+  print(f"目录存在: {os.path.exists(folder)}")
+
+  # 删除目录
+  os.rmdir(folder)
+  print(f"删除目录: {folder}")
+
+  # 再次检查目录是否存在
+  print(f"目录存在: {os.path.exists(folder)}")
+
+solution: |
+  import os
+  folder = 'test_folder'
+  os.mkdir(folder)
+  print(f"创建目录: {folder}")
+  print(f"目录存在: {os.path.exists(folder)}")
+  os.rmdir(folder)
+  print(f"删除目录: {folder}")
+  print(f"目录存在: {os.path.exists(folder)}")

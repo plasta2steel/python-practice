@@ -1,0 +1,55 @@
+id: dai-pd-04
+title: 查看数据 - head和describe
+difficulty: 1
+category: pandas-basics
+description: |
+  head() 查看前几行，describe() 查看数值列的统计摘要。
+  给定DataFrame，分别输出：
+  1. 前3行（head(3)）
+  2. 数值列的统计摘要（describe()）
+expected_output: |
+  前3行:
+     姓名  年龄  分数
+  0  张三   25   85
+  1  李四   30   92
+  2  王五   28   78
+
+  统计摘要:
+                 年龄        分数
+  count   5.000000   5.000000
+  mean   29.400000  86.400000
+  std     4.159327   7.569676
+  min    25.000000  78.000000
+  25%    28.000000  80.000000
+  50%    29.000000  85.000000
+  75%    30.000000  92.000000
+  max    35.000000  96.000000
+starter_code: |
+  import pandas as pd
+  df = pd.DataFrame({
+      '姓名': ['张三', '李四', '王五', '赵六', '钱七'],
+      '年龄': [25, 30, 28, 35, 29],
+      '分数': [85, 92, 78, 96, 80]
+  })
+
+  # 查看前3行
+  print("前3行:")
+  print(df.head(3))
+  print()
+
+  # 查看数值列的统计摘要
+  print("统计摘要:")
+  print(df.describe())
+
+solution: |
+  import pandas as pd
+  df = pd.DataFrame({
+      '姓名': ['张三', '李四', '王五', '赵六', '钱七'],
+      '年龄': [25, 30, 28, 35, 29],
+      '分数': [85, 92, 78, 96, 80]
+  })
+  print("前3行:")
+  print(df.head(3))
+  print()
+  print("统计摘要:")
+  print(df.describe())

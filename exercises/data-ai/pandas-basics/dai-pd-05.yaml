@@ -1,0 +1,55 @@
+id: dai-pd-05
+title: 选择列 - 取出单列和多列
+difficulty: 2
+category: pandas-basics
+description: |
+  选择列是数据分析中最常见的操作。
+  单列：df['列名'] 或 df.列名
+  多列：df[['列名1', '列名2']]
+
+  给定DataFrame，分别输出：
+  1. '姓名'列
+  2. '姓名'和'分数'两列
+expected_output: |
+  单列 - 姓名:
+  0    张三
+  1    李四
+  2    王五
+  3    赵六
+  Name: 姓名, dtype: object
+
+  两列 - 姓名和分数:
+     姓名  分数
+  0  张三   85
+  1  李四   92
+  2  王五   78
+  3  赵六   96
+starter_code: |
+  import pandas as pd
+  df = pd.DataFrame({
+      '姓名': ['张三', '李四', '王五', '赵六'],
+      '年龄': [25, 30, 28, 35],
+      '分数': [85, 92, 78, 96]
+  })
+
+  # 选择单列 '姓名'
+  print("单列 - 姓名:")
+  print(df['姓名'])
+  print()
+
+  # 选择多列 '姓名' 和 '分数'
+  print("两列 - 姓名和分数:")
+  print(df[['姓名', '分数']])
+
+solution: |
+  import pandas as pd
+  df = pd.DataFrame({
+      '姓名': ['张三', '李四', '王五', '赵六'],
+      '年龄': [25, 30, 28, 35],
+      '分数': [85, 92, 78, 96]
+  })
+  print("单列 - 姓名:")
+  print(df['姓名'])
+  print()
+  print("两列 - 姓名和分数:")
+  print(df[['姓名', '分数']])

@@ -1,0 +1,30 @@
+id: web-flask-01
+title: Flask入门 - 创建应用实例
+difficulty: 1
+category: flask-basics
+description: |
+  Flask是最轻量的Python Web框架。
+  每个Flask应用都从创建一个应用实例开始。
+
+  请完成以下步骤：
+  1. 导入Flask类
+  2. 创建应用实例 app
+  3. 输出应用的名称
+expected_output: |
+  应用名称: __main__
+starter_code: |
+  # 第1步: 从flask模块导入Flask类
+  from flask import Flask
+
+  # 第2步: 创建Flask应用实例
+  # 提示: app = Flask(__name__)
+  app = Flask(__name__)
+
+  # 第3步: 输出应用的名称
+  # 提示: app.name
+  print(f"应用名称: {app.name}")
+
+solution: |
+  from flask import Flask
+  app = Flask(__name__)
+  print(f"应用名称: {app.name}")

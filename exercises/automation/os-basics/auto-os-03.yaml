@@ -1,0 +1,41 @@
+id: auto-os-03
+title: 判断路径 - 文件还是目录
+difficulty: 2
+category: os-basics
+description: |
+  os.path模块提供了路径操作的工具函数。
+  - os.path.isfile(path): 判断是否是文件
+  - os.path.isdir(path): 判断是否是目录
+  - os.path.exists(path): 判断路径是否存在
+
+  请判断给定的路径列表，分别输出每个路径的类型
+expected_output: |
+  /home/user: 目录
+  /home/user/file.txt: 文件
+  /tmp/fake: 不存在
+starter_code: |
+  import os
+
+  paths = ['/home/user', '/home/user/file.txt', '/tmp/fake']
+
+  for path in paths:
+      # 用 os.path.exists() 先判断是否存在
+      # 如果存在，用 os.path.isfile() 和 os.path.isdir() 判断类型
+      # 输出格式: 路径: 类型（文件/目录/不存在）
+      if not os.path.exists(path):
+          print(f"{path}: 不存在")
+      elif os.path.isdir(path):
+          print(f"{path}: 目录")
+      elif os.path.isfile(path):
+          print(f"{path}: 文件")
+
+solution: |
+  import os
+  paths = ['/home/user', '/home/user/file.txt', '/tmp/fake']
+  for path in paths:
+      if not os.path.exists(path):
+          print(f"{path}: 不存在")
+      elif os.path.isdir(path):
+          print(f"{path}: 目录")
+      elif os.path.isfile(path):
+          print(f"{path}: 文件")

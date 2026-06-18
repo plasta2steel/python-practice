@@ -1,0 +1,25 @@
+id: auto-os-01
+title: 获取当前目录 - os.getcwd()
+difficulty: 1
+category: os-basics
+description: |
+  os模块是Python标准库，用于与操作系统交互。
+  os.getcwd() 获取当前工作目录的路径。
+
+  请导入os模块，然后输出当前工作目录
+expected_output: |
+  当前目录: /home/user/project
+starter_code: |
+  # 第1步: 导入os模块
+  import os
+
+  # 第2步: 用 os.getcwd() 获取当前目录
+  current_dir = os.getcwd()
+
+  # 第3步: 输出当前目录
+  print(f"当前目录: {current_dir}")
+
+solution: |
+  import os
+  current_dir = os.getcwd()
+  print(f"当前目录: {current_dir}")

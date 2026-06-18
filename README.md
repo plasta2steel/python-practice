@@ -6,7 +6,7 @@ A local Python practice platform with a Web UI, designed for self-directed learn
 
 ## Features
 
-- **113 exercises** across 3 directions + 15 shared basics
+- **135 exercises** across 3 directions + 15 shared basics, with smooth difficulty progression
 - **Monaco Editor** (VS Code-grade code editor) in the browser
 - **Auto-complete**: pass the expected output → auto-saves and locks the editor
 - **Read-only mode**: once completed, your code is preserved and cannot be edited
@@ -42,10 +42,26 @@ python-practice-platform/
 │   ├── css/style.css
 │   └── js/app.js
 ├── exercises/
-│   ├── shared/basics/      # 15 shared fundamentals
-│   ├── data-ai/            # 38 exercises: Data Processing, ML, Visualization
-│   ├── web-backend/        # 30 exercises: HTTP, Database, FastAPI, Auth
-│   └── automation/         # 30 exercises: Files, CLI, HTTP scraping, Projects
+│   ├── shared/basics/      # 15 shared fundamentals (★-★★★)
+│   ├── data-ai/
+│   │   ├── numpy-basics/   # 4 exercises (★-★★) — NumPy入门
+│   │   ├── pandas-basics/  # 6 exercises (★-★★) — Pandas入门
+│   │   ├── data-processing/# 10 exercises (★★★-★★★★)
+│   │   ├── intermediate/   # 10 exercises (★★★-★★★★)
+│   │   ├── visualization/  # 8 exercises (★★★-★★★★)
+│   │   └── machine-learning/ # 10 exercises (★★★★-★★★★★)
+│   ├── web-backend/
+│   │   ├── flask-basics/   # 6 exercises (★-★★) — Flask入门
+│   │   ├── http-basics/    # 10 exercises (★★-★★★)
+│   │   ├── database/       # 7 exercises (★★★-★★★★)
+│   │   ├── fastapi/        # 8 exercises (★★★-★★★★)
+│   │   └── auth-middleware/ # 5 exercises (★★★★-★★★★★)
+│   └── automation/
+│       ├── os-basics/      # 6 exercises (★-★★) — 文件系统入门
+│       ├── file-system/    # 10 exercises (★★-★★★)
+│       ├── cli-tools/      # 7 exercises (★★-★★★)
+│       ├── http-scraping/  # 8 exercises (★★-★★★)
+│       └── automation-projects/ # 5 exercises (★★★-★★★★)
 ├── data/progress.json      # Local progress storage
 ├── obsidian/               # Obsidian vault templates
 │   ├── 练习模板.md
@@ -55,12 +71,35 @@ python-practice-platform/
 
 ## Directions
 
-| Direction | Focus | Exercises |
-|-----------|-------|-----------|
-| [Shared Basics] | Python fundamentals | 15 |
-| Data / AI / ML | NumPy, pandas, visualization, ML | 38 |
-| Web Backend | HTTP, databases, FastAPI, auth | 30 |
-| Automation | Filesystem, CLI, scraping, projects | 30 |
+| Direction | Focus | Exercises | Difficulty Range |
+|-----------|-------|-----------|------------------|
+| Shared Basics | Python fundamentals | 15 | ★ - ★★★ |
+| Data / AI / ML | NumPy, pandas, visualization, ML | 52 | ★ - ★★★★★ |
+| Web Backend | Flask, HTTP, databases, FastAPI, auth | 36 | ★ - ★★★★★ |
+| Automation | os/pathlib, filesystem, CLI, scraping | 32 | ★ - ★★★★ |
+
+## Difficulty Progression
+
+```
+★☆☆☆☆  15题  ← 入门热身，熟悉工具
+★★☆☆☆  29题  ← 基础应用，建立信心
+★★★☆☆  60题  ← 核心技能，主战场
+★★★★☆  29题  ← 进阶挑战
+★★★★★   2题  ← 综合项目
+```
+
+## Bridge Exercises (桥接题)
+
+每个方向都新增了入门桥接题，帮助从 basics 平滑过渡：
+
+| Direction | Bridge Category | What It Teaches |
+|-----------|-----------------|-----------------|
+| data-ai | numpy-basics | import、array创建、切片、运算 |
+| data-ai | pandas-basics | Series、DataFrame、选列、筛选 |
+| web-backend | flask-basics | 路由、参数、JSON响应、请求处理 |
+| automation | os-basics | getcwd、listdir、文件读写、pathlib |
+
+做完 basics 后，先刷对应方向的桥接题，再进入核心题目。
 
 ## Exercise YAML Format
 

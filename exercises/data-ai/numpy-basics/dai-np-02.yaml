@@ -1,0 +1,25 @@
+id: dai-np-02
+title: 数组属性 - shape和dtype
+difficulty: 1
+category: numpy-basics
+description: |
+  每个NumPy数组都有属性。
+  创建一个数组 [10, 20, 30, 40, 50]，然后分别输出：
+  1. 数组的形状（shape）
+  2. 数组的数据类型（dtype）
+expected_output: |
+  形状: (5,)
+  类型: int64
+starter_code: |
+  import numpy as np
+  arr = np.array([10, 20, 30, 40, 50])
+
+  # 输出 arr 的形状：使用 arr.shape
+
+  # 输出 arr 的数据类型：使用 arr.dtype
+
+solution: |
+  import numpy as np
+  arr = np.array([10, 20, 30, 40, 50])
+  print(f"形状: {arr.shape}")
+  print(f"类型: {arr.dtype}")

@@ -1,0 +1,49 @@
+id: dai-pd-06
+title: 筛选行 - 条件过滤
+difficulty: 2
+category: pandas-basics
+description: |
+  用布尔条件筛选行是数据分析的核心操作。
+  语法：df[df['列名'] > 值]
+
+  给定学生成绩DataFrame，筛选出：
+  1. 分数大于85的学生
+  2. 年龄等于30的学生
+expected_output: |
+  分数 > 85:
+     姓名  年龄  分数
+  1  李四   30   92
+  3  赵六   35   96
+
+  年龄 = 30:
+     姓名  年龄  分数
+  1  李四   30   92
+starter_code: |
+  import pandas as pd
+  df = pd.DataFrame({
+      '姓名': ['张三', '李四', '王五', '赵六'],
+      '年龄': [25, 30, 28, 35],
+      '分数': [85, 92, 78, 96]
+  })
+
+  # 筛选分数 > 85 的行
+  print("分数 > 85:")
+  print(df[df['分数'] > 85])
+  print()
+
+  # 筛选年龄 = 30 的行
+  print("年龄 = 30:")
+  print(df[df['年龄'] == 30])
+
+solution: |
+  import pandas as pd
+  df = pd.DataFrame({
+      '姓名': ['张三', '李四', '王五', '赵六'],
+      '年龄': [25, 30, 28, 35],
+      '分数': [85, 92, 78, 96]
+  })
+  print("分数 > 85:")
+  print(df[df['分数'] > 85])
+  print()
+  print("年龄 = 30:")
+  print(df[df['年龄'] == 30])
