@@ -74,9 +74,9 @@ python-practice-platform/
 | Direction | Focus | Exercises | Difficulty Range |
 |-----------|-------|-----------|------------------|
 | Shared Basics | Python fundamentals | 15 | ★ - ★★★ |
-| Data / AI / ML | NumPy, pandas, visualization, ML | 52 | ★ - ★★★★★ |
+| Data / AI / ML | NumPy, pandas, visualization, ML | 48 | ★ - ★★★★★ |
 | Web Backend | Flask, HTTP, databases, FastAPI, auth | 36 | ★ - ★★★★★ |
-| Automation | os/pathlib, filesystem, CLI, scraping | 32 | ★ - ★★★★ |
+| Automation | os/pathlib, filesystem, CLI, scraping | 36 | ★ - ★★★★ |
 
 ## Difficulty Progression
 

@@ -1,4 +1,5 @@
 import os
+import re
 import json
 import yaml
 import subprocess
@@ -102,12 +103,63 @@ def get_exercise(exercise_id):
     return jsonify({k: v for k, v in ex.items() if not k.startswith("_")})
 
 
+# ──────────────────────────────────────────────────────────────────────
+# Code sandboxing (basic safety check for local use — NOT production-grade)
+# This scans submitted code for obviously dangerous patterns before
+# running it.  A real production system would need seccomp / containers.
+# ──────────────────────────────────────────────────────────────────────
+
+DANGEROUS_IMPORTS = [
+    "os", "subprocess", "sys", "shutil", "pathlib", "socket",
+    "http", "urllib", "ftplib", "smtplib", "ctypes", "importlib",
+]
+
+DANGEROUS_KEYWORDS = [
+    "__import__", "eval", "exec", "compile",
+]
+
+DANGEROUS_PATTERNS = [
+    "os.system", "os.popen", "subprocess",
+    "__builtins__", "__import__",
+    "getattr", "setattr", "delattr",
+    "globals()", "locals()", "vars()", "dir()",
+]
+
+
+def check_code_safety(code: str) -> str | None:
+    """Return an error message if the code looks dangerous, else None."""
+    violations: list[str] = []
+
+    for mod in DANGEROUS_IMPORTS:
+        # Match `import mod` or `from mod import ...`
+        if re.search(rf"\bimport\s+{re.escape(mod)}\b", code) or \
+           re.search(rf"\bfrom\s+{re.escape(mod)}\b", code):
+            violations.append(f"不允许导入模块 '{mod}'（可能用于执行系统级操作）")
+
+    for kw in DANGEROUS_KEYWORDS:
+        if re.search(rf"\b{re.escape(kw)}\b", code):
+            violations.append(f"不允许使用 '{kw}'（可用于动态执行任意代码）")
+
+    for pat in DANGEROUS_PATTERNS:
+        if pat in code:
+            violations.append(f"不允许使用 '{pat}'（可能用于绕过安全限制）")
+
+    if violations:
+        return "代码安全检查未通过：\n" + "\n".join(f"  • {v}" for v in violations)
+    return None
+
+
 @app.route("/api/run", methods=["POST"])
 def run_code():
     data = request.get_json()
     code = data.get("code", "")
     if not code.strip():
         return jsonify({"output": "", "error": "", "execution_time": 0})
+
+    # Pre-execution safety check
+    safety_error = check_code_safety(code)
+    if safety_error:
+        return jsonify({"output": "", "error": safety_error, "execution_time": 0})
 
     try:
         with tempfile.NamedTemporaryFile(mode="w", suffix=".py", delete=False, encoding="utf-8") as f:
